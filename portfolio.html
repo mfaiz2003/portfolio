@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden">
+  
+  <header>
+        <nav class="p-2 bg-gray-200 border-b border-gray-400 fixed w-full top-0 left-0 z-50">
+            <ul id="menuList" class="hidden md:flex gap-8 justify-end text-lg px-10">
+                <a href="portfolio.html"><li class="hover:text-xl" >Home</li></a>
+                <a href="project.html"><li class="hover:text-xl">Projects</li></a>
+                <a href="contact.html"><li class="hover:text-xl">Contact</li></a>
+            </ul>
+             <button id="menuToggle" class="md:hidden text-gray-700 focus:outline-none">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6  fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+        </nav>
+         <div id="mobileMenu" class="md:hidden hidden flex flex-col gap-4 border-b border-gray-400 p-4 mt-10">
+    <a href="portfolio.html" class="hover:text-xl">Home</a>
+    <a href="project.html" class="hover:text-xl">Projects</a>
+    <a href="contact.html"class="hover:text-xl">contact</a>
+  </div>
+    </header>
+ 
+
+<div class="relative"> 
+     
+     
+    <div id="slideText" class="mt-28 sm:mt-48 opacity-0 -translate-x-full transition-all duration-1000 ease-out">
+        <p class="flex mt-3 font-bold text-4xl sm:text-6xl md:text-5xl lg:text-6xl px-6 sm:px-20">Hi,I'am</p>
+        <p class="flex font-bold mt-3  px-6 sm:px-20 bg-gradient-to-r from-blue-500 via-pink-500 to-red-500 bg-clip-text text-transparent text-4xl sm:text-6xl md:text-5xl lg:text-6xl">Mohammad Faiz</p>
+        <p class="flex mt-3 font-bold  px-6 sm:px-20  text-4xl sm:text-6xl md:text-5xl lg:text-6xl">I'am Front-End Developer</p>
+    </div>
+    
+     <div id="slideimage" class="px-6 sm:px-2 sm:py-5 md:absolute md:right-2 md:-top-36 opacity-0 translate-x-full transition-all duration-1000 ease-out">
+      <img src="gif1.gif" alt="gif1" class="w-2/3 mx-auto md:mx-0">
+    </div>
+
+    <div class=" mt-16 px-6 sm:px-20">
+        <p class="flex">I specialize in building modern, responsive websites using HTML, CSS, Tailwind CSS, and JavaScript.</p>
+        <p class="flex">I enjoy turning creative ideas into real-world web experiences with clean, user-friendly designs.</p>
+    </div>
+
+        <div class="flex flex-wrap justify-center md:justify-start gap-6 mt-10 px-6 sm:px-20">
+        <a href="#Contact"><button class="border rounded-lg p-2 px-3 font-bold hover:bg-blue-500 border-blue-500">Contact Me</button></a>
+        <a href="https://drive.google.com/file/d/1nk2YB-CBvpiUIYK6Gq9x6jNLi209M-OM/view?usp=drive_link">
+          <button class="border rounded-lg p-2 px-3 border-blue-500 font-bold hover:bg-blue-500">My Resume</button></a>
+    </div>
+
+    <!-- about me -->
+    <div class="mt-5 px-4 sm:px-6 md:px-10 py-8">
+     <div id="aboutSection" class="p-6 rounded-2xl max-w-3xl shadow-md flex flex-col bg-gradient-to-r from-green-100 to-blue-100 via-red-100 opacity-0 translate-y-10 transition-all duration-1000">
+      
+    <h1 class="text-center text-2xl font-bold px-3 mx-3 inline-block text-white rounded-xl bg-blue-800">About Me</h1>
+    <p class="text-black px-4 mt-3 p-3 rounded-md opacity-0 scale-95  transition-all duration-1000" id="aboutZoom">
+      Hi, I'm Mohammad Faiz, a passionate and dedicated Front-End developer specializing in creating modern, responsive, and user-friendly websites. 
+      With a strong foundation in HTML, CSS, JavaScript, and Tailwind CSS, I love bringing creative ideas to life through clean and efficient code.
+
+      I focus on building intuitive user interfaces and seamless user experiences. Whether it's developing static sites or dynamic web applications, 
+      I'm committed to writing maintainable and optimized code. I'm continuously learning new technologies to stay updated in the ever-evolving world of web development.
+    </p>
+  </div>
+</div>
+     
+<!-- education box -->
+
+<div class="px-4 sm:px-6 md:px-10 py-8">
+  <div id="educationSection" class="p-6 rounded-2xl max-w-3xl shadow-md flex flex-col ml-auto opacity-0 translate-y-10 transition-all duration-1000">
+  <h1 class="text-center text-2xl font-bold px-3 mx-3 inline-block text-white rounded-xl bg-black">Education</h1>
+</div>
+</div>
+
+</div>
+
+</body>
+ <script src="script.js" defer></script>
+</html>
