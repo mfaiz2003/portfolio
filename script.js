@@ -46,7 +46,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const education = document.getElementById("educationSection");
+  const about = document.getElementById("aboutSection");
+
+  if (!about) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        
+        about.classList.remove("opacity-0", "translate-y-10");
+        about.classList.add("opacity-100", "translate-y-0");
+      } else {
+        
+        about.classList.remove("opacity-100", "translate-y-0");
+        about.classList.add("opacity-0", "translate-y-10");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(about);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const education = document.getElementById("educationsection");
 
   if (!education) return;
 
@@ -62,30 +84,67 @@ document.addEventListener("DOMContentLoaded", () => {
         education.classList.add("opacity-0", "translate-y-10");
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.1 });
 
   observer.observe(education);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const education = document.getElementById("aboutSection");
+  const skill = document.getElementById("skillsection");
 
-  if (!education) return;
+  if (!skill) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         
-        education.classList.remove("opacity-0", "translate-y-10");
-        education.classList.add("opacity-100", "translate-y-0");
+        skill.classList.remove("opacity-0", "translate-y-10");
+        skill.classList.add("opacity-100", "translate-y-0");
       } else {
         
-        education.classList.remove("opacity-100", "translate-y-0");
-        education.classList.add("opacity-0", "translate-y-10");
+        skill.classList.remove("opacity-100", "translate-y-0");
+        skill.classList.add("opacity-0", "translate-y-10");
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.1 });
 
-  observer.observe(education);
+  observer.observe(skill);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const project = document.getElementById("projectsection");
+
+  if (!project) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        
+        project.classList.remove("opacity-0", "translate-y-10");
+        project.classList.add("opacity-100", "translate-y-0");
+      } else {
+        
+        project.classList.remove("opacity-100", "translate-y-0");
+        project.classList.add("opacity-0", "translate-y-10");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(project);
+});
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("toggleEducation");
+    const moreContent = document.getElementById("educationMore");
+
+    let isVisible = false;
+
+    toggleBtn.addEventListener("click", () => {
+      isVisible = !isVisible;
+      moreContent.classList.toggle("hidden");
+      toggleBtn.textContent = isVisible ? "Show Less" : "Show More";
+    });
+  });
 
