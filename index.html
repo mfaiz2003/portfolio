@@ -6,14 +6,14 @@
     <title>Document</title>
     <link href="./output.css" rel="stylesheet">
 </head>
-<body class="overflow-x-hidden bg-violet-50">
+<body class="overflow-x-hidden">
   
-  <header>
-        <nav class="p-2 bg-gray-200 border-b border-gray-400 fixed w-full top-0 left-0 z-50">
+  <header class="">
+        <nav class="bg-transparent backdrop-blur-md  p-2 border-b border-gray-400 fixed w-full top-0 left-0 z-50">
             <ul id="menuList" class="hidden md:flex gap-8 justify-end text-lg px-10">
                 <a href="index.html"><li class="hover:text-xl" >Home</li></a>
-                <a href="project.html"><li class="hover:text-xl">Projects</li></a>
-                <a href="contact.html"><li class="hover:text-xl">Contact</li></a>
+                <a href="#projectsection"><li class="hover:text-xl">Projects</li></a>
+                <a href="#servicesection"><li class="hover:text-xl">Service</li></a>
             </ul>
              <button id="menuToggle" class="md:hidden text-gray-700 focus:outline-none">
         
@@ -26,40 +26,47 @@
         </nav>
          <div id="mobileMenu" class="md:hidden hidden flex flex-col gap-4 border-b border-gray-400 p-4 mt-10">
     <a href="index.html" class="hover:text-xl">Home</a>
-    <a href="project.html" class="hover:text-xl">Projects</a>
-    <a href="contact.html"class="hover:text-xl">contact</a>
+    <a href="#projectsection" class="hover:text-xl">Projects</a>
+    <a href="#servicesection"class="hover:text-xl">Service</a>
   </div>
     </header>
  
 
 <div class="relative"> 
      
-     
-    <div id="slideText" class="mt-28 sm:mt-48 opacity-0 -translate-x-full transition-all duration-1000 ease-out">
-        <p class="flex mt-3 font-bold text-4xl sm:text-6xl md:text-5xl lg:text-6xl px-6 sm:px-20 font-serif">Hi,I'am</p>
-        <p class="flex font-bold mt-3  px-6 sm:px-20 bg-gradient-to-r from-blue-500 via-pink-500 to-red-500 bg-clip-text text-transparent text-4xl sm:text-6xl md:text-5xl lg:text-6xl font-serif">Mohammad Faiz</p>
-        <p class="flex mt-3 font-bold  px-6 sm:px-20  text-4xl sm:text-6xl md:text-5xl lg:text-6xl font-serif">Front-End Developer</p>
-    </div>
-    
-     <div id="slideimage" class="px-6 sm:px-2 sm:py-5 md:absolute md:right-2 md:-top-36 opacity-0 translate-x-full transition-all duration-1000 ease-out">
-      <img src="gif4.png" alt="gif4" class="w-auto mx-auto md:mx-0">
-    </div>
+<div class="flex flex-col md:flex-row items-center justify-between px-6 sm:px-20 mt-16 gap-8">
 
-    <div class=" mt-16 px-6 sm:px-20">
-        <p class="flex">I specialize in building modern, responsive websites using HTML, CSS, Tailwind CSS, and JavaScript.</p>
-        <p class="flex">I enjoy turning creative ideas into real-world web experiences with clean, user-friendly designs.</p>
+  <!-- Text Section -->
+  <div id="slideText" class="md:w-1/2 opacity-0 -translate-x-full transition-all duration-1000 ease-out">
+    <p class="mt-3 font-bold text-4xl sm:text-6xl md:text-5xl lg:text-6xl font-serif">Hi, I'm</p>
+    <p class="font-bold mt-3 bg-gradient-to-r from-blue-500 via-pink-500 to-red-500 bg-clip-text text-transparent text-4xl sm:text-6xl md:text-5xl lg:text-6xl font-serif">
+      Mohammad Faiz
+    </p>
+    <p class="mt-3 font-bold text-4xl sm:text-6xl md:text-5xl lg:text-6xl font-serif">Front-End Developer</p>
+    <div class="mt-6">
+      <p class="text-base">I specialize in building modern, responsive websites using HTML, CSS, and JavaScript.</p>
+      <p class="text-base">I enjoy turning creative ideas into user-friendly designs.</p>
     </div>
+    <div class="flex flex-wrap gap-4 mt-6">
+      <a href="#contactsection">
+        <button class="border rounded-lg p-2 px-3 font-bold hover:bg-blue-500 border-blue-500">Contact Me</button>
+      </a>
+      <a href="https://drive.google.com/file/d/1nk2YB-CBvpiUIYK6Gq9x6jNLi209M-OM/view?usp=drive_link">
+        <button class="border rounded-lg p-2 px-3 border-blue-500 font-bold hover:bg-blue-500">My Resume</button>
+      </a>
+    </div>
+  </div>
 
-        <div class="flex flex-wrap justify-center md:justify-start gap-6 mt-10 px-6 sm:px-20">
-        <a href="#Contact"><button class="border rounded-lg p-2 px-3 font-bold hover:bg-blue-500 border-blue-500">Contact Me</button></a>
-        <a href="https://drive.google.com/file/d/1nk2YB-CBvpiUIYK6Gq9x6jNLi209M-OM/view?usp=drive_link">
-          <button class="border rounded-lg p-2 px-3 border-blue-500 font-bold hover:bg-blue-500">My Resume</button></a>
-    </div>
+  <div id="slideimage" class="md:w-1/2 opacity-0 translate-x-full transition-all duration-1000 ease-out">
+    <img src="main3.webp" alt="main3" class="w-full h-full">
+  </div>
+
+</div>
+
 
     <!-- about me -->
-    <div class="mt-5 px-4 sm:px-6 md:px-10 py-8">
-     <div id="aboutSection" class="p-6 rounded-2xl max-w-3xl shadow-2xl flex flex-col opacity-0 translate-y-10 transition-all duration-1000 bg-white">
-      
+    <div class="mt-5 px-4 sm:px-6 md:px-10 py-8 bg-blue-50">
+     <div id="aboutSection" class="p-6 rounded-2xl max-w-3xl shadow-lg flex flex-col opacity-0 translate-y-10 transition-all duration-1000 bg-white">
     <h1 class="text-center text-2xl font-bold px-3 mx-3 inline-block text-white rounded-xl bg-blue-800">About Me</h1>
     <p class="text-justify text-black px-4 mt-3 p-3 rounded-md opacity-0 scale-95  transition-all duration-1000" id="aboutZoom">
       Hi, I'm Mohammad Faiz, a passionate and dedicated Front-End developer specializing in creating modern, responsive, and user-friendly websites. 
@@ -74,8 +81,8 @@
 
 <!-- education box -->
 
-<div class="px-4 sm:px-6 md:px-10 py-8 mt-5">
-  <div id="educationsection" class="p-6 rounded-2xl max-w-3xl shadow-2xl flex flex-col ml-auto opacity-0 translate-y-10 transition-all duration-1000 bg-white">
+<div class="px-4 sm:px-6 md:px-10 py-8">
+  <div id="educationsection" class="p-6 rounded-2xl max-w-3xl shadow-lg flex flex-col ml-auto opacity-0 translate-y-10 transition-all duration-1000 bg-white">
     <h1 class="text-center text-2xl font-bold px-3 mx-3 inline-block text-white rounded-xl bg-black">Education</h1>
     
       <p class="px-4 mt-5 font-bold text-lg sm:text-2xl bg-gradient-to-r from-red-500 to-blue-800 bg-clip-text text-transparent">High School</p>
@@ -122,8 +129,8 @@
      
 <!-- skills box -->
 
-<div class="px-4 sm:px-6 md:px-10 py-8 font-serif italic opacity-0 translate-y-10 transition-all duration-1000" id="skillsection">
-   <h1 class="flex text-4xl font-bold font-serif opacity-50">Skills</h1>
+<div class="px-4 sm:px-6 md:px-10 py-8 bg-blue-50 font-serif italic opacity-0 translate-y-10 transition-all duration-1000" id="skillsection">
+   <h1 class="flex text-5xl font-bold font-serif opacity-50">Skills</h1>
 
    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
 
@@ -169,24 +176,97 @@
     </div>
   </div>
 </div>
+
+
+<!-- Service box -->
+
+<div class="px-4 sm:px-6 md:px-10 py-8 mt-5 opacity-0 translate-y-10 transition-all duration-1000" id="servicesection">
+  <h1 class="font-serif text-5xl font-bold opacity-80">Services</h1>
+  <p class="mt-1 italic text-2xl font-bold opacity-50">What I offer</p>
+
+  <div class="flex gap-6 flex-col md:flex-row px-6 sm:px-20 mt-5">
+    <div class="bg-blue-50 w-full sm:w-1/2 flex flex-col items-center py-6 rounded-2xl border border-blue-400 hover:scale-105">
+    <img src="code.png" alt="code" class="w-16 h-16 opacity-80 mt-2">
+    <p class="font-medium text-lg opacity-90">Front-End Development</p>
+    <p class="text-justify px-10 mt-2">I specialize in creating responsive, fast, and user-friendly websites
+       using modern technologies like HTML, CSS, JavaScript, React.js, and Next.js.Whether
+        it's building a single-page application or a complex web platform, I focus on delivering
+         clean and maintainable code.</p>
+   </div>
+
+   <div class="w-full sm:w-1/2 flex flex-col items-center py-6 rounded-2xl border border-blue-400 bg-blue-50 hover:scale-105">
+    <img src="ui.png" alt="ui" class="w-10 h-10 opacity-80 mt-6">
+    <p class="font-medium text-lg opacity-90 mt-2">UI / UX Design</p>
+    <p class="text-justify px-10 mt-2">I design intuitive and visually appealing interfaces that enhance user experience and engagement.My UI/UX process
+       involves user research, wireframing, prototyping, and designing user flows for both mobile and web platforms</p>
+   </div>
+</div>
+</div>
  
 <!-- projects box -->
 
 
- <div class="mt-5 px-4 sm:px-6 md:px-10 py-8 opacity-0 translate-y-10 transition-all duration-1000" id="projectsection">
-    <h1 class="font-bold text-5xl font-serif opacity-50">Projects</h1>
+ <div class=" mt-5 bg-blue-50 px-4 sm:px-6 md:px-10 py-8 opacity-0 translate-y-10 transition-all duration-1000" id="projectsection">
+    <h1 class="font-bold text-5xl font-serif opacity-80">Projects</h1>
 <div class="flex flex-col md:flex-row">
 
   <div class="w-full sm:w-1/2 mt-5">
     <img src="project4.png" alt="project4">
   </div>
-  <div class=" mt-5 flex flex-col shadow-2xl rounded-2xl p-3 ">
+  <div class=" mt-5 flex flex-col shadow-2xl rounded-2xl p-3 border border-blue-200 bg-white">
     <img src="main.png" alt="main" class="h-60 w-auto object-contain rounded-xl">
-    <p class="mt-5 font-bold text-2xl opacity-70 px-10">Taxi Booking</p>
+    <p class="mt-5 font-bold text-3xl sm:text-5xl opacity-70 px-10 text-center">Taxi Booking</p>
       <a href="https://mfaiz2003.github.io/Texibooking/"><p class="px-4 py-2 text-end mt-16 opacity-50 font-bold hover:text-lg">Check it Now</p></a>
     </div>
 </div>
  </div>
+
+ <!-- contact box -->
+
+ <div class="bg-blue-950 px-4 sm:px-6 md:px-10 py-8 opacity-0 translate-y-10 transition-all duration-1000" id="contactsection">
+  <h1 class="mt-3 font-bold text-2xl sm:text-5xl font-serif text-white">Contact Me</h1>
+  <p class="text-white font-bold sm:text-2xl opacity-50">GET IN TOUCH</p>
+
+  <div class="flex justify-center gap-6 mt-10">
+    
+    <a href="mailto:mfaiz76542@gmail.com">
+    <img src="email1.png" alt="email1" class="w-12 h-10">
+    </a>
+
+    <a href="www.linkedin.com/in/mohammad-faiz-330756232">
+      <img src="linkedin.png" alt="linkedin" class="w-10 h-10">
+    </a>
+
+    <a href="https://github.com/mfaiz2003"> 
+    <img src="github2.jpg" alt="github2" class="w-10 h-10">
+    </a> 
+   
+    <a href="https://www.instagram.com/f_a_i_z_08?igsh=MWE4d2lpMzdvaDNjbA==">
+    <img src="insta.png" alt="insta" class="w-10 h-10">
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=100013560639846">
+    <img src="facebook.png" alt="facebook" class="w-10 h-10">
+    </a>
+
+    <a href="tel:+91 9012576542" title="+91 9012576542">
+      <img src="caller2.png" alt="caller2" class="w-10 h-10">
+    </a>
+
+  </div>
+  <div>
+
+  </div>
+ </div>
+
+ <!-- footer Box -->
+
+ <footer>
+  <div class="py-4">
+  <h1 class="text-2xl text-center opacity-70">Mohammad Faiz</h1>
+  <p class="text-center mt-3 opacity-50">mohammad faiz © All CopyRights Reserved 2024</p>
+  </div>
+ </footer>
 
 </div>
 </div>

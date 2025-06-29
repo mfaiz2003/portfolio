@@ -134,6 +134,51 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(project);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const service = document.getElementById("servicesection");
+
+  if (!service) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        
+        service.classList.remove("opacity-0", "translate-y-10");
+       service.classList.add("opacity-100", "translate-y-0");
+      } else {
+        
+        service.classList.remove("opacity-100", "translate-y-0");
+        service.classList.add("opacity-0", "translate-y-10");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(service);
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contact = document.getElementById("contactsection");
+
+  if (!contact) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        
+        contact.classList.remove("opacity-0", "translate-y-10");
+       contact.classList.add("opacity-100", "translate-y-0");
+      } else {
+        
+        contact.classList.remove("opacity-100", "translate-y-0");
+        contact.classList.add("opacity-0", "translate-y-10");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(contact);
+});
+
 
   document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("toggleEducation");
